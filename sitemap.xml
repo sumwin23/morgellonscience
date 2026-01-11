@@ -3,27 +3,32 @@
 
   <url>
     <loc>https://morgellonscience.com/</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/archive.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/evidence.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/methods.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/about.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-01-11</lastmod>
+  </url>
+
+  <url>
+    <loc>https://morgellonscience.com/articles/</loc>
+    <lastmod>2026-01-11</lastmod>
   </url>
 
   <url>
@@ -36,5 +41,9 @@
     <lastmod>2026-01-10</lastmod>
   </url>
 
-</urlset>
+  <url>
+    <loc>https://morgellonscience.com/articles/algorithmic-erasure.html</loc>
+    <lastmod>2026-01-11</lastmod>
+  </url>
 
+</urlset>
