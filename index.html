@@ -58,3 +58,342 @@
 
     *{ box-sizing:border-box; }
     html{ scroll-behavior:smooth; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--serif);
+      line-height:1.55;
+    }
+
+    a{ color: var(--accent); text-decoration-thickness:.08em; text-underline-offset:.15em; }
+    a:hover{ color: var(--accent2); }
+
+    header{
+      border-bottom:1px solid var(--rule);
+      background: linear-gradient(to bottom, rgba(0,0,0,.02), transparent);
+    }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 22px 18px; }
+
+    .topbar{
+      display:flex; align-items: baseline; justify-content: space-between; gap: 14px;
+      padding: 6px 0 10px 0;
+    }
+    .brand{
+      display:flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+    }
+    .brand h1{
+      margin:0;
+      font-size: 1.55rem;
+      letter-spacing:.02em;
+      font-weight: 750;
+    }
+    .brand h1 a{ color: inherit; text-decoration:none; }
+    .tagline{
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .issue{
+      font-family: var(--sans);
+      color: var(--muted);
+      font-size: .95rem;
+      white-space: nowrap;
+    }
+
+    nav{
+      display:flex; gap: 12px; flex-wrap: wrap;
+      font-family: var(--sans);
+      padding: 8px 0 14px 0;
+    }
+    nav a{
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      color: var(--accent);
+    }
+    nav a:hover{
+      border-color: var(--rule);
+      background: var(--paper);
+    }
+    nav a[aria-current="page"]{
+      border-color: var(--rule);
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    main{ max-width: var(--max); margin: 0 auto; padding: 22px 18px 30px 18px; }
+
+    .paper{
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px 22px;
+    }
+
+    .kicker{
+      font-family: var(--sans);
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 18px;
+      align-items: start;
+      margin-top: 10px;
+    }
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .title{
+      margin: 6px 0 10px 0;
+      font-size: 2.25rem;
+      line-height: 1.1;
+    }
+    .lede{
+      margin: 0;
+      color: #2a2a2a;
+      font-size: 1.08rem;
+    }
+
+    .callout{
+      border-left: 4px solid var(--accent);
+      padding: 14px 14px;
+      background: #f7f7f7;
+      border-radius: 12px;
+      font-family: var(--sans);
+      color: #2b2b2b;
+    }
+    .smallcaps{ font-variant: small-caps; letter-spacing: .04em; color: var(--muted); }
+
+    .rule{
+      border:0;
+      border-top: 1px solid var(--rule);
+      margin: 18px 0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+    }
+    .card{
+      grid-column: span 12;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 16px 16px 14px 16px;
+      background: #fff;
+    }
+    @media (min-width: 900px){
+      .card.span8{ grid-column: span 8; }
+      .card.span4{ grid-column: span 4; }
+    }
+    .meta{
+      display:flex; flex-wrap: wrap; gap: 10px;
+      font-family: var(--sans);
+      font-size: .88rem;
+      color: var(--muted);
+    }
+    .card h2{
+      margin: 8px 0 8px 0;
+      font-size: 1.25rem;
+      line-height: 1.22;
+    }
+    .card p{
+      margin: 0;
+      color: #2a2a2a;
+    }
+
+    .pillrow{
+      display:flex; flex-wrap: wrap; gap: 8px;
+      margin-top: 10px;
+      font-family: var(--sans);
+    }
+    .pill{
+      border: 1px solid var(--rule);
+      background: #fafafa;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: .85rem;
+      color: #333;
+    }
+
+    .actions{
+      display:flex; gap: 10px; flex-wrap: wrap;
+      margin-top: 12px;
+      font-family: var(--sans);
+    }
+    .btn{
+      display:inline-block;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      text-decoration:none;
+      color: var(--ink);
+    }
+    .btn.primary{
+      border-color: transparent;
+      background: var(--accent);
+      color: white;
+    }
+    .btn.primary:hover{ background: var(--accent2); }
+
+    footer{
+      margin-top: 22px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: .92rem;
+    }
+    .footgrid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 12px;
+      padding: 16px 0 6px 0;
+    }
+    @media (max-width: 860px){
+      .footgrid{ grid-template-columns: 1fr; }
+    }
+
+    .fineprint{
+      font-size: .9rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    .mono{ font-family: var(--mono); }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <h1><a href="/">MorgellonScience</a></h1>
+        <div class="tagline">Journal-style publication for materials-centric inquiry</div>
+      </div>
+      <div class="issue"><span class="mono">Vol. 1</span> • <span id="year"></span></div>
+    </div>
+
+    <nav aria-label="Primary navigation">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/archive.html">Archive</a>
+      <a href="/about.html">About</a>
+      <a href="/policies.html">Policies</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="paper">
+    <div class="kicker">Featured article</div>
+
+    <div class="hero">
+      <div>
+        <h2 class="title">The Materiality of Morgellons</h2>
+        <p class="lede">
+          A critical review of the CDC’s “Unexplained Dermopathy” investigation and a case for treating filaments as analyzable materials rather than rhetorical debris.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="/article/materiality-of-morgellons.html">Read the full article</a>
+          <a class="btn" href="/archive.html">Browse archive</a>
+        </div>
+
+        <div class="pillrow" aria-label="Keywords">
+          <span class="pill">CDC</span>
+          <span class="pill">Materials analysis</span>
+          <span class="pill">Cellulose</span>
+          <span class="pill">Silica</span>
+          <span class="pill">PEG</span>
+          <span class="pill">FTIR</span>
+          <span class="pill">EDX</span>
+          <span class="pill">SEM</span>
+        </div>
+      </div>
+
+      <aside class="callout">
+        <div class="smallcaps">Editorial aim</div>
+        <p style="margin:8px 0 0 0;">
+          Citable, testable, methods-forward writing. If something is labeled “contaminant,” it still has to explain structure, co-occurrence, and context.
+        </p>
+        <p class="fineprint">
+          Preference: explicit limitations, transparent revisions, references you can actually check.
+        </p>
+      </aside>
+    </div>
+
+    <hr class="rule" />
+
+    <section aria-label="Latest">
+      <div class="kicker">Latest</div>
+      <div class="grid" style="margin-top:10px;">
+        <article class="card span8">
+          <div class="meta">
+            <span>Critical Review</span>
+            <span>Vol. 1</span>
+            <span><span class="mono" id="pubyear"></span></span>
+          </div>
+          <h2>
+            <a href="/article/materiality-of-morgellons.html">
+              The Materiality of Morgellons: A Critical Review of the CDC’s “Unexplained Dermopathy” Investigation and the Limitations of Exclusionary Diagnostics
+            </a>
+          </h2>
+          <p>
+            Examines the “consistent with cotton” conclusion, highlights gaps in spectroscopy-level characterization, and proposes a materials-centric framework for inquiry.
+          </p>
+        </article>
+
+        <aside class="card span4">
+          <div class="meta"><span>Publishing standard</span></div>
+          <h2>Submission structure</h2>
+          <p>
+            Abstract. Claims. Methods you’d run (or demand). Limitations. References. If it can’t survive a falsification sentence, it’s not ready.
+          </p>
+          <p style="margin-top:10px;"><a href="/policies.html#submissions">Read guidelines</a></p>
+        </aside>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="footgrid">
+        <div>
+          <div class="smallcaps">MorgellonScience</div>
+          <div>© <span id="copyyear"></span> • Journal-style publication site</div>
+          <div class="fineprint">Informational only. Not medical advice.</div>
+        </div>
+        <div>
+          <div class="smallcaps">Quick links</div>
+          <div>
+            <a href="/archive.html">Archive</a> •
+            <a href="/policies.html">Policies</a> •
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+  (function(){
+    const y = new Date().getFullYear();
+    document.getElementById("year").textContent = y;
+    document.getElementById("copyyear").textContent = y;
+    document.getElementById("pubyear").textContent = y;
+  })();
+</script>
+</body>
+</html>
