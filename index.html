@@ -1,97 +1,60 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>MorgellonScience | Journal-format research and critical review</title>
-  <meta name="description" content="A journal-style site dedicated to materials-first analysis and critical review related to Morgellons phenomena."/>
-  <link rel="stylesheet" href="assets/css/journal.css"/>
-  <meta property="og:title" content="MorgellonScience"/>
-  <meta property="og:description" content="Journal-format research and critical review."/>
-  <meta property="og:type" content="website"/>
-</head>
-<body>
-<a class="skiplink" href="#main">Skip to content</a>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MorgellonScience | A journal-style archive for materials-centric inquiry</title>
+  <meta name="description" content="MorgellonScience publishes structured critical reviews and materials-centric inquiry related to Morgellons phenomena, with citable claims, methods, and references." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-<header class="site">
-  <div class="container">
-    <div class="brandbar">
-      <div class="brand">
-        <h1><a href="index.html" style="text-decoration:none;color:inherit;">MorgellonScience</a></h1>
-        <div class="tag">A journal-style archive for materials-centric inquiry</div>
-      </div>
-      <div class="tag" aria-label="Site status">Issue: Vol. 1 • 2026</div>
-    </div>
-    <nav class="primary" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="archive.html">Archive</a>
-      <a href="about.html">About</a>
-      <a href="policies.html">Policies</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+  <!-- Canonical: update to your final domain once live -->
+  <link rel="canonical" href="https://morgellonscience.com/" />
 
-<main id="main" class="container">
-  <div class="paper">
-    <div class="hero">
-      <div>
-        <div class="kicker">Featured Article</div>
-        <h2 class="bigtitle">The Materiality of Morgellons</h2>
-        <p class="lede">
-          A critical review of the CDC’s “Unexplained Dermopathy” investigation and why exclusionary diagnostics can fail when the object of study is a material.
-        </p>
-        <p style="margin-top:12px;">
-          <a href="article/materiality-of-morgellons.html">Read article</a>
-          <span class="sidenote">• Includes structured abstract, claims, and references.</span>
-        </p>
-      </div>
-      <div class="callout">
-        <div class="smallcaps">Aim</div>
-        <p style="margin:6px 0 0 0;">
-          Treat filament reports as analyzable artifacts. If a claim is “contaminant,” it still must explain structure, co-occurrence, and context.
-        </p>
-      </div>
-    </div>
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="MorgellonScience" />
+  <meta property="og:title" content="MorgellonScience" />
+  <meta property="og:description" content="Journal-style publication for materials-centric inquiry, critical review, and structured, citable arguments." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://morgellonscience.com/" />
+  <meta property="og:image" content="https://morgellonscience.com/og-default.png" />
 
-    <hr class="rule"/>
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
 
-    <div class="grid" aria-label="Latest items">
-      <div class="card span8" data-archive-card data-title="The Materiality of Morgellons" data-keywords="CDC unexplained dermopathy materials FTIR EDX SEM cellulose silica PEG">
-        <div class="meta">
-          <span>Vol. 1 (2026)</span>
-          <span>Critical Review</span>
-          <span>Materials Science</span>
-        </div>
-        <h3><a href="article/materiality-of-morgellons.html">The Materiality of Morgellons: A Critical Review of the CDC’s “Unexplained Dermopathy” Investigation and the Limitations of Exclusionary Diagnostics</a></h3>
-        <p>Interrogates the “consistent with cotton” conclusion and proposes a materials-first framework for future inquiry.</p>
-      </div>
+  <!-- Favicons (optional but recommended; add files later) -->
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-      <div class="card span4">
-        <div class="meta"><span>Submissions</span></div>
-        <h3>Manuscript format</h3>
-        <p>Short, citable, specific. If you claim a mechanism, define what data would falsify it.</p>
-        <p style="margin-top:10px;"><a href="policies.html#submissions">View guidelines</a></p>
-      </div>
-    </div>
-  </div>
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"MorgellonScience",
+    "url":"https://morgellonscience.com/",
+    "description":"Journal-style publication for materials-centric inquiry and critical review related to Morgellons phenomena.",
+    "inLanguage":"en"
+  }
+  </script>
 
-  <footer class="site">
-    <div class="container">
-      <div class="footgrid">
-        <div>
-          <div class="smallcaps">MorgellonScience</div>
-          <div>© <span data-year></span> • Journal-format publication site</div>
-        </div>
-        <div>
-          <div class="smallcaps">Quick links</div>
-          <div><a href="archive.html">Archive</a> • <a href="policies.html">Policies</a> • <a href="contact.html">Contact</a></div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</main>
+  <style>
+    :root{
+      --bg:#fbfbf8;
+      --paper:#ffffff;
+      --ink:#141414;
+      --muted:#5b5b5b;
+      --rule:#dbdbdb;
+      --accent:#1b3a57;
+      --accent2:#7a1f2a;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
 
-<script src="assets/js/journal.js"></script>
-</body>
-</html>
+      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+      --max: 1040px;
+      --radius: 16px;
+    }
+
+    *{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; }
