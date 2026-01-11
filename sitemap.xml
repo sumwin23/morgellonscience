@@ -45,5 +45,10 @@
     <loc>https://morgellonscience.com/articles/algorithmic-erasure.html</loc>
     <lastmod>2026-01-11</lastmod>
   </url>
-
+<url>
+  <loc>https://morgellonscience.com/articles/unexplained-dermopathy-analytical-gaps.html</loc>
+  <lastmod>2026-01-11</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.7</priority>
+</url>
 </urlset>
