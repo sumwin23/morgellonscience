@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Archive | MorgellonScience</title>
-  <meta name="description" content="Chronological archive of publications on MorgellonScience: materials analysis, filament datasets, and critical reviews." />
+  <meta name="description" content="Chronological archive of MorgellonScience publications, including materials analysis, critical reviews, and consumer-protection research." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://morgellonscience.com/archive.html" />
 
   <meta property="og:site_name" content="MorgellonScience" />
   <meta property="og:title" content="Archive | MorgellonScience" />
-  <meta property="og:description" content="Browse the publication archive: materials analysis, evidence pages, and critical reviews." />
+  <meta property="og:description" content="Browse the MorgellonScience publication archive: materials science, diagnostic critique, and consumer protection." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://morgellonscience.com/archive.html" />
 
@@ -18,9 +19,14 @@
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
-    "name":"Archive | MorgellonScience",
+    "name":"MorgellonScience Archive",
+    "description":"Chronological archive of peer-style articles, reviews, and analyses published by MorgellonScience.",
     "url":"https://morgellonscience.com/archive.html",
-    "isPartOf":{"@type":"WebSite","name":"MorgellonScience","url":"https://morgellonscience.com/"}
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"MorgellonScience",
+      "url":"https://morgellonscience.com/"
+    }
   }
   </script>
 
@@ -36,9 +42,11 @@
     .kicker{font-family:system-ui,sans-serif;color:#666;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;}
     .card{border:1px solid #e3e3e3;border-radius:10px;padding:16px;margin-top:14px;background:#fff;}
     .meta{font-family:system-ui,sans-serif;color:#666;font-size:.9rem;display:flex;gap:10px;flex-wrap:wrap;}
+    .tag{font-size:.8rem;background:#f3f3f3;border:1px solid #ddd;border-radius:999px;padding:4px 10px;}
     input{width:min(520px,100%);padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:system-ui,sans-serif;}
   </style>
 </head>
+
 <body>
 <header>
   <div class="wrap">
@@ -56,28 +64,66 @@
 <main class="wrap">
   <section class="paper">
     <div class="kicker">Publication archive</div>
-    <h2 style="margin-top:10px;">Browse</h2>
-    <p>Filter by keyword (e.g., CDC, FTIR, cellulose, SEM, dataset).</p>
+
+    <h2 style="margin-top:10px;">Browse articles</h2>
+    <p>
+      Filter by keyword, topic, or method (e.g., CDC, FTIR, SEM, consumer protection).
+    </p>
+
     <input id="q" type="search" placeholder="Filter archive…" aria-label="Filter archive">
 
     <div id="list">
-      <article class="card" data-title="The Materiality of Morgellons" data-keywords="cdc unexplained dermopathy cotton cellulose silica peg ftir edx sem review">
+
+      <!-- ARTICLE 1 -->
+      <article class="card"
+        data-title="The Materiality of Morgellons"
+        data-keywords="cdc unexplained dermopathy materials science cellulose silica peg ftir edx sem pathology diagnostics">
         <div class="meta">
-          <span>2026</span><span>Critical Review</span><span>Vol. 1</span>
+          <span>2026</span>
+          <span>Critical Review</span>
+          <span>Vol. 1</span>
+          <span class="tag">Materials Science</span>
         </div>
         <h3 style="margin:8px 0 6px 0;">
-          <a href="/articles/materiality-of-morgellons.html">The Materiality of Morgellons</a>
+          <a href="/articles/materiality-of-morgellons.html">
+            The Materiality of Morgellons
+          </a>
         </h3>
         <p style="margin:0;">
-          A critical review of the CDC’s “Unexplained Dermopathy” investigation and the limitations of exclusionary diagnostics.
+          A materials-centric critique of the CDC’s “Unexplained Dermopathy” investigation,
+          examining spectroscopy gaps, exclusionary diagnostics, and filament characterization.
         </p>
       </article>
+
+      <!-- ARTICLE 2 -->
+      <article class="card"
+        data-title="The Validation Trap"
+        data-keywords="consumer protection unexplained dermopathy pathological fibers borrelia forensic pathology histology clinical overreach monetization">
+        <div class="meta">
+          <span>2026</span>
+          <span>Scientific & Consumer Analysis</span>
+          <span>Vol. 1</span>
+          <span class="tag">Consumer Protection</span>
+        </div>
+        <h3 style="margin:8px 0 6px 0;">
+          <a href="/articles/the-validation-trap.html">
+            The Validation Trap: A 2026 Analysis of Pathological Fiber Narratives and Clinical Overreach
+          </a>
+        </h3>
+        <p style="margin:0;">
+          An examination of forensic misdirection, weak biological inference,
+          and the financial exploitation that emerges when diagnostic terms are suppressed.
+        </p>
+      </article>
+
     </div>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">© 2026 MorgellonScience · Informational only · Not medical advice</div>
+  <div class="wrap">
+    © 2026 MorgellonScience · Informational only · Not medical advice
+  </div>
 </footer>
 
 <script>
