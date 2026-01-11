@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Archive | MorgellonScience</title>
+  <meta name="description" content="Chronological archive of publications on MorgellonScience: materials analysis, filament datasets, and critical reviews." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://morgellonscience.com/archive.html" />
+
+  <meta property="og:site_name" content="MorgellonScience" />
+  <meta property="og:title" content="Archive | MorgellonScience" />
+  <meta property="og:description" content="Browse the publication archive: materials analysis, evidence pages, and critical reviews." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://morgellonscience.com/archive.html" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Archive | MorgellonScience",
+    "url":"https://morgellonscience.com/archive.html",
+    "isPartOf":{"@type":"WebSite","name":"MorgellonScience","url":"https://morgellonscience.com/"}
+  }
+  </script>
+
+  <style>
+    body{margin:0;font-family:Georgia,serif;background:#fbfbf8;color:#141414;line-height:1.55;}
+    header,footer{background:#fff;border-bottom:1px solid #ddd;}
+    footer{border-top:1px solid #ddd;border-bottom:none;}
+    .wrap{max-width:1000px;margin:auto;padding:20px;}
+    nav a{margin-right:14px;font-family:system-ui,sans-serif;font-size:.95rem;color:#1b3a57;text-decoration:none;}
+    nav a:hover{text-decoration:underline;}
+    a{color:#1b3a57;}
+    .paper{background:#fff;border:1px solid #ddd;padding:24px;margin-top:20px;}
+    .kicker{font-family:system-ui,sans-serif;color:#666;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;}
+    .card{border:1px solid #e3e3e3;border-radius:10px;padding:16px;margin-top:14px;background:#fff;}
+    .meta{font-family:system-ui,sans-serif;color:#666;font-size:.9rem;display:flex;gap:10px;flex-wrap:wrap;}
+    input{width:min(520px,100%);padding:10px 12px;border:1px solid #ddd;border-radius:8px;font-family:system-ui,sans-serif;}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1 style="margin:0;">MorgellonScience</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/archive.html" aria-current="page">Archive</a>
+      <a href="/evidence.html">Raw Evidence</a>
+      <a href="/methods.html">Methods</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="paper">
+    <div class="kicker">Publication archive</div>
+    <h2 style="margin-top:10px;">Browse</h2>
+    <p>Filter by keyword (e.g., CDC, FTIR, cellulose, SEM, dataset).</p>
+    <input id="q" type="search" placeholder="Filter archive…" aria-label="Filter archive">
+
+    <div id="list">
+      <article class="card" data-title="The Materiality of Morgellons" data-keywords="cdc unexplained dermopathy cotton cellulose silica peg ftir edx sem review">
+        <div class="meta">
+          <span>2026</span><span>Critical Review</span><span>Vol. 1</span>
+        </div>
+        <h3 style="margin:8px 0 6px 0;">
+          <a href="/articles/materiality-of-morgellons.html">The Materiality of Morgellons</a>
+        </h3>
+        <p style="margin:0;">
+          A critical review of the CDC’s “Unexplained Dermopathy” investigation and the limitations of exclusionary diagnostics.
+        </p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 MorgellonScience · Informational only · Not medical advice</div>
+</footer>
+
+<script>
+  (function(){
+    const q = document.getElementById('q');
+    const cards = Array.from(document.querySelectorAll('#list .card'));
+    q.addEventListener('input', () => {
+      const term = q.value.trim().toLowerCase();
+      cards.forEach(c => {
+        const hay = (c.dataset.title + " " + c.dataset.keywords).toLowerCase();
+        c.style.display = hay.includes(term) ? "" : "none";
+      });
+    });
+  })();
+</script>
+</body>
+</html>
