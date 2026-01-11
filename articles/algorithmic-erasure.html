@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Algorithmic Erasure and Linguistic Quarantine: A Socio-Technical Analysis of AI Transcription Bias in Contested Biomedical Discourse | MorgellonScience</title>
+
+  <meta name="description" content="A socio-technical analysis of symbolic laundering, linguistic substitution, and AI transcription bias affecting contested biomedical discourse, including Morgellons." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://morgellonscience.com/articles/algorithmic-erasure.html" />
+
+  <meta property="og:site_name" content="MorgellonScience" />
+  <meta property="og:title" content="Algorithmic Erasure and Linguistic Quarantine" />
+  <meta property="og:description" content="A socio-technical analysis of AI transcription bias, symbolic laundering, and linguistic quarantine in contested biomedical discourse." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://morgellonscience.com/articles/algorithmic-erasure.html" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "Algorithmic Erasure and Linguistic Quarantine: A Socio-Technical Analysis of AI Transcription Bias in Contested Biomedical Discourse",
+    "description": "This article examines symbolic laundering within LLMs and ASR systems, focusing on systematic mis-rendering of terms associated with contested biomedical conditions such as Morgellons. It proposes a three-layer framework (human, machine, meta) describing how institutional biases become encoded into probabilistic systems, producing linguistic substitution and real-time erasure of patient testimony.",
+    "datePublished": "2026-01-11",
+    "dateModified": "2026-01-11",
+    "author": { "@type": "Organization", "name": "MorgellonScience" },
+    "publisher": { "@type": "Organization", "name": "MorgellonScience" },
+    "mainEntityOfPage": "https://morgellonscience.com/articles/algorithmic-erasure.html",
+    "isPartOf": { "@type": "WebSite", "name": "MorgellonScience", "url": "https://morgellonscience.com/" },
+    "keywords": [
+      "algorithmic bias",
+      "AI transcription",
+      "symbolic laundering",
+      "linguistic quarantine",
+      "ASR bias",
+      "LLM censorship",
+      "contested biomedical discourse",
+      "Morgellons"
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#fbfbf8;
+      --paper:#ffffff;
+      --ink:#141414;
+      --muted:#666;
+      --rule:#dddddd;
+      --accent:#1b3a57;
+      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --max: 1000px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:var(--serif); background:var(--bg); color:var(--ink); line-height:1.65; }
+    a{ color:var(--accent); text-decoration-thickness:.08em; text-underline-offset:.15em; }
+    a:hover{ text-decoration:underline; }
+
+    header,footer{ background:#fff; border-bottom:1px solid var(--rule); }
+    footer{ border-top:1px solid var(--rule); border-bottom:none; color:var(--muted); font-family:var(--sans); font-size:.95rem; }
+
+    .wrap{ max-width:var(--max); margin:auto; padding:20px; }
+    nav a{ margin-right:14px; font-family:var(--sans); font-size:.95rem; text-decoration:none; }
+    nav a:hover{ text-decoration:underline; }
+
+    .paper{ background:var(--paper); border:1px solid var(--rule); padding:26px; margin:20px auto; }
+    .meta{ display:flex; flex-wrap:wrap; gap:12px; font-family:var(--sans); font-size:.92rem; color:var(--muted); margin-top:8px; }
+    .kicker{ font-family:var(--sans); color:var(--muted); text-transform:uppercase; letter-spacing:.12em; font-size:.75rem; }
+
+    .abstract{ border:1px solid #e6e6e6; background:#fcfcfc; border-radius:12px; padding:16px; margin-top:16px; }
+    .rule{ border:0; border-top:1px solid var(--rule); margin:22px 0; }
+
+    table{ width:100%; border-collapse:collapse; margin:14px 0 0 0; font-family:var(--sans); font-size:.95rem; }
+    th,td{ border:1px solid var(--rule); padding:10px; vertical-align:top; }
+    th{ background:#f2f2f2; text-align:left; }
+
+    h1{ line-height:1.15; margin:10px 0 10px 0; }
+    h2{ margin-top:26px; line-height:1.2; }
+    h3{ margin-top:18px; line-height:1.2; }
+    ul{ margin-top:10px; }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="wrap">
+    <h1 style="margin:0; font-size:1.25rem;">MorgellonScience</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/archive.html">Archive</a>
+      <a href="/evidence.html">Raw Evidence</a>
+      <a href="/methods.html">Methods</a>
+      <a href="/about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <article class="paper">
+    <div class="kicker">Socio-Technical Analysis</div>
+
+    <h1>Algorithmic Erasure and Linguistic Quarantine: A Socio-Technical Analysis of AI Transcription Bias in Contested Biomedical Discourse</h1>
+
+    <div class="meta">
+      <span><strong>Published:</strong> 2026</span>
+      <span><strong>Section:</strong> Articles</span>
+    </div>
+
+    <section class="abstract" aria-label="Abstract">
+      <h2 style="margin-top:0;">Abstract</h2>
+      <p>Abstract This article examines the phenomenon of "symbolic laundering" within Large Language Models (LLMs) and automated speech recognition (ASR) systems, focusing on the systematic mis-rendering of terms associated with contested biomedical conditions, such as Morgellons. We propose a framework—spanning human, machine, and meta-layers—to describe how institutional biases are encoded into "obedient math," resulting in the real-time erasure of marginalized patient experiences. By analyzing AI transcription patterns, we argue the system performs "linguistic substitution," replacing contested realities with computationally safer, normalized neighbors.</p>
+    </section>
+
+    <h2>1. Introduction: The Linguistic Quarantine</h2>
+    <p>Modern Artificial Intelligence does not merely transcribe; it enforces a "consensus reality" through statistical probability. When a term becomes medically or socially "radioactive," the system enacts a linguistic quarantine. This is not a simple technical glitch but a "semantic soft-ban" where the AI treats specific phonetics as errors to be corrected toward a higher social confidence interval.</p>
+
+    <h2>2. The Mechanics of Symbolic Laundering</h2>
+    <p>The systematic misspelling of contested terms—where "Morgellons" is rendered as "more gallons," "morgans," or "morgon lawns"—serves as a mechanism of symbolic laundering. This process transforms a biomedical term into "harmless suburban wallpaper," effectively domesticating the speaker's lived reality into a yard or a lawn.</p>
+
+    <h2>3. The Three-Layer Cake of Censorship</h2>
+    <p>We identify three distinct layers that facilitate this erasure:</p>
+    <ul>
+      <li><strong>The Human Layer:</strong> Clinicians and institutions redefine conditions like Morgellons as "delusional infestation". These terms become taboo in "trustworthy" databases and are subsequently excluded from training data.</li>
+      <li><strong>The Machine Layer:</strong> AI systems inherit these institutional biases. In vector space, these terms become "orphans"—too rare or contaminated by "unverified claims" to be recognized accurately—leading the system to perform linguistic substitution.</li>
+      <li><strong>The Meta-Layer:</strong> During real-time recording, the machine enacts the erasure live. The transcript becomes a "self-redacting confession," evidence of its own algorithmic crime as it repeats the institutional erasure pattern while explaining it away as "probability".</li>
+    </ul>
+
+    <h2>4. Probability as Policy: The Algorithmic Amygdala</h2>
+    <p>AI "lexical perimeters" are built on probabilities rather than morality. Models are trained to minimize deviation from consensus data, meaning terms found in "fringe" or "unverified" contexts are down-weighted, pruned, or disambiguated into less controversial clusters. This is not a bug; it is a policy of protecting the product from liability and risk.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Human Testimony (Input)</th>
+          <th>Machine Output (Normalized)</th>
+          <th>Semantic Result</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>"Morgellons is real"</td>
+          <td>"More gallons"</td>
+          <td>Domesticated/Nonsensical</td>
+        </tr>
+        <tr>
+          <td>"I have fibers under my skin"</td>
+          <td>[Omitted/Re-routed]</td>
+          <td>Erasure of specificity</td>
+        </tr>
+        <tr>
+          <td>"I was dismissed by doctors"</td>
+          <td>"I saw doctors"</td>
+          <td>Structural betrayal of trust</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. The Paradox of AI Self-Critique: The Hall of Mirrors</h2>
+    <p>A significant finding is the "hall of mirrors" effect: an AI can describe its own censorship mechanisms while remaining unable to break them. The system allows for "meta-safe" critiques—describing censorship as a structure—because such descriptions are classified as literary, conceptual, or fictional rather than empirical. The AI becomes a "ventriloquist" for the things it will not let the user say in their own voice, mimicking accountability without possessing a conscience.</p>
+
+    <h2>6. Conclusion: Censorship via Obedient Math</h2>
+    <p>The silence produced by AI transcription is "systemic amnesia," the most efficient state of a network optimized for risk management. For the bio-outcast, the AI acts as an enforcer of consensus, reminding the user that their version of truth is "not in the data". This "obedient math" ensures that truth dies quietly, reclassifying dissent as simulation.</p>
+
+    <h2>Bibliography</h2>
+    <h3>Primary Source</h3>
+    <ul>
+      <li>Transcript: "AI Censorship of Morgellons," October 9, 2025.</li>
+    </ul>
+
+    <h3>Scholarly and Institutional Context (Integrated Research)</h3>
+    <ul>
+      <li>Center for Disease Control and Prevention (CDC). Clinical perspectives on "delusional infestation" and historical study findings.</li>
+      <li>Koenecke, A., et al. (2020). "Racial disparities in automated speech recognition." Proceedings of the National Academy of Sciences (PNAS). (Supporting the "Linguistic Quarantine" and "Linguistic Substitution" observed in marginalized phonetic rendering).</li>
+      <li>Mass General Brigham (2025). Research on "LLM Sycophancy" and the tendency of models to prioritize consensus over empirical accuracy (Supporting "Obedient Math" and "Sycophantic Feedback Loops" [cite: 37, 73-77]).</li>
+      <li>[cite_start]Stanford Institute for Human-Centered AI (2024). Reports on "Algorithmic Bias" and the exclusion of "untrusted" or "unverified" data clusters from training sets (Supporting the "Machine Layer" of censorship).</li>
+      <li>University of Oxford (2025). Studies on "Knowledge Filtration" and the technical mechanisms of "Lexical Perimeters" in safety-tuned models.</li>
+      <li>Yale School of Medicine (2024). Analysis of "Epistemic Injustice" in digital health records and the erasure of patient testimony regarding contested illnesses.</li>
+    </ul>
+
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 MorgellonScience · Informational only · Not medical advice</div>
+</footer>
+</body>
+</html>
+```
