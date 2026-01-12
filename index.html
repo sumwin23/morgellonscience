@@ -3,8 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>MorgellonScience | Forensic Materials Archive</title>
-  
+  <title>MorgellonScience | Forensic Materials Archive & Spectroscopic Data</title>
+  <meta name="description" content="Technical archive documenting the biopolymer synthesis and spectroscopic baselines of dermal filaments. Featuring Raman, FTIR, and SEM-EDX analysis of anomalous materials." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://morgellonscience.com/" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ResearchProject",
+        "@id": "https://morgellonscience.com/#project",
+        "name": "MorgellonScience Materials Archive",
+        "description": "A repository for the morphological and spectroscopic documentation of anomalous filamentous artifacts.",
+        "keywords": "Spectroscopy, Materials Science, Biopolymers, SEM-EDX, Cellulose II",
+        "url": "https://morgellonscience.com/"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://morgellonscience.com/#website",
+        "url": "https://morgellonscience.com/",
+        "name": "MorgellonScience",
+        "publisher": { "@id": "https://morgellonscience.com/#project" }
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #fbfbf8;
@@ -26,10 +52,9 @@
       background: var(--bg); 
       color: var(--ink); 
       line-height: 1.6; 
-      overflow-x: hidden; /* Prevents side-scrolling on mobile */
+      overflow-x: hidden; 
     }
     
-    /* Hero Section with long-word fix */
     .hero {
       padding: 60px 20px;
       background: var(--accent);
@@ -46,7 +71,6 @@
       margin: 0; 
       letter-spacing: -1px;
       line-height: 1.1;
-      max-width: 100%;
     }
 
     .hero p { 
@@ -59,7 +83,6 @@
     
     .wrap { max-width: 1100px; margin: auto; padding: 20px; }
     
-    /* Navigation */
     header { background: #fff; border-bottom: 1px solid var(--rule); }
     .nav-container { 
       display: flex; 
@@ -68,6 +91,7 @@
       max-width: 1100px; 
       margin: auto; 
       padding: 15px 20px; 
+      flex-wrap: wrap;
     }
     .logo { 
       font-size: 1.2rem; 
@@ -76,16 +100,15 @@
       text-decoration: none; 
       letter-spacing: -0.5px;
     }
+    nav { display: flex; gap: 12px; flex-wrap: wrap; }
     nav a { 
-      margin-left: 15px; 
       font-family: var(--sans); 
       font-weight: 600; 
       text-decoration: none; 
       color: var(--accent); 
-      font-size: 0.9rem; 
+      font-size: 0.85rem; 
     }
 
-    /* Grid Layout */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,26 +144,20 @@
     .feature-card p { font-size: 0.9rem; color: #444; flex-grow: 1; margin-bottom: 15px; }
     .read-more { font-family: var(--sans); font-weight: 700; color: var(--accent); font-size: 0.85rem; }
 
-    /* Publication Feed */
     .feed-section { margin-top: 60px; }
-    .feed-item { 
-      padding: 20px 0; 
-      border-bottom: 1px solid var(--rule); 
-    }
+    .feed-item { padding: 20px 0; border-bottom: 1px solid var(--rule); }
     .feed-item a { font-size: 1.1rem; font-weight: bold; text-decoration: none; color: var(--ink); display: block; margin-bottom: 5px; line-height: 1.3; }
     .feed-item span { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); }
 
     footer { margin-top: 80px; padding: 40px 20px; background: #fff; border-top: 1px solid var(--rule); text-align: center; font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
 
-    /* --- MOBILE RESPONSIVENESS --- */
     @media (max-width: 600px) {
-      .nav-container { flex-direction: column; gap: 10px; }
-      nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-      nav a { margin: 0; font-size: 0.8rem; }
+      .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+      nav { justify-content: center; gap: 8px; }
+      nav a { background: #f0f2f5; padding: 6px 12px; border-radius: 4px; font-size: 0.8rem; }
       .hero { padding: 40px 15px; }
-      .hero h1 { font-size: 2.2rem; } /* Forced scale down for small mobile */
+      .hero h1 { font-size: 2.1rem; }
       .grid { margin-top: 20px; padding: 0 10px; }
-      .feature-card { padding: 20px; }
     }
   </style>
 </head>
@@ -151,9 +168,11 @@
   <div class="nav-container">
     <a href="/" class="logo">MorgellonScience</a>
     <nav>
+      <a href="/">Home</a>
       <a href="/archive.html">Archive</a>
       <a href="/evidence.html">Evidence</a>
       <a href="/methods.html">Methods</a>
+      <a href="/about.html">About</a>
     </nav>
   </div>
 </header>
@@ -161,7 +180,7 @@
 <section class="hero">
   <div class="wrap">
     <h1>MorgellonScience</h1>
-    <p>A 2026 Forensic Archive dedicated to materials science and the biochemical analysis of unexplained dermopathies.</p>
+    <p>A technical archive for the spectroscopic documentation and biochemical analysis of anomalous filamentous artifacts.</p>
   </div>
 </section>
 
