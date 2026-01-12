@@ -3,25 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Methods | First-Person Collection & Analysis | MorgellonScience</title>
-  <meta name="description" content="First-person documentation of sample collection, imaging, and analytical procedures used in filament observation and materials analysis." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://morgellonscience.com/methods.html" />
+  <title>Methods | Materials Documentation & Analysis Protocols | MorgellonScience</title>
 
-  <meta property="og:site_name" content="MorgellonScience" />
-  <meta property="og:title" content="Methods | MorgellonScience" />
-  <meta property="og:description" content="First-person sample collection, chain of custody, imaging, analysis, and limitations." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://morgellonscience.com/methods.html" />
+  <meta name="description" content="Technical protocols for the collection, preservation, and spectroscopic analysis of dermal filaments. Focused on repeatable methodology and morphological documentation." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://morgellonscience.com/methods.html" />
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"WebPage",
-    "name":"Methods | MorgellonScience",
-    "url":"https://morgellonscience.com/methods.html",
-    "about":["sample collection","chain of custody","microscopy","spectroscopy","materials analysis"],
-    "isPartOf":{"@type":"WebSite","name":"MorgellonScience","url":"https://morgellonscience.com/"}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ResearchProject",
+        "@id": "https://morgellonscience.com/#project",
+        "name": "MorgellonScience Materials Archive"
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://morgellonscience.com/methods.html#protocol",
+        "name": "Dermal Filament Collection and Analysis Protocol",
+        "description": "Standardized methods for documenting clinical phenotypes and extracting filamentous artifacts for spectroscopic review.",
+        "isPartOf": { "@id": "https://morgellonscience.com/#project" },
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Phenotype Documentation",
+            "text": "Macro-photography and site-specific mapping of dermal anomalies prior to extraction."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Material Extraction",
+            "text": "Aseptic collection of filaments using non-contaminating substrate-probes."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Spectroscopic Preparation",
+            "text": "Mounting samples for Micro-Raman or SEM-EDX analysis to establish material baselines."
+          }
+        ]
+      }
+    ]
   }
   </script>
 
