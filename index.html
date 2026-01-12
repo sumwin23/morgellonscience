@@ -3,32 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MorgellonScience | Research Archive & Material Analysis Hub</title>
 
-  <title>MorgellonScience | Materials Analysis & Filament Evidence Archive</title>
-
-  <meta name="description" content="MorgellonScience is a journal-style archive publishing original materials analysis, filament data, and critical reviews related to Morgellons phenomena." />
+  <meta name="description" content="Technical repository for the spectroscopic analysis of biopolymer synthesis in dermal phenomena. Features Raman spectroscopy baselines, SEM-EDX imagery, and critical reviews of institutional diagnostic gaps." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-
-  <!-- Canonical (correct once domain is live) -->
   <link rel="canonical" href="https://morgellonscience.com/" />
 
-  <!-- Open Graph -->
   <meta property="og:site_name" content="MorgellonScience" />
-  <meta property="og:title" content="MorgellonScience" />
-  <meta property="og:description" content="A materials-centric evidence archive for filamentous dermal phenomena." />
+  <meta property="og:title" content="MorgellonScience | Research Archive" />
+  <meta property="og:description" content="A materials-centric archive for the documentation of biogenic filaments and spectroscopic anomalies." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://morgellonscience.com/" />
 
-  <!-- Schema: Website -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "MorgellonScience",
-    "url": "https://morgellonscience.com/",
-    "description": "Journal-style archive for original materials analysis and filament evidence related to Morgellons phenomena."
+    "@graph": [
+      {
+        "@type": "ResearchProject",
+        "@id": "https://morgellonscience.com/#project",
+        "name": "MorgellonScience Materials Archive",
+        "alternateName": "Filamentous Artifact Analysis Database",
+        "url": "https://morgellonscience.com/",
+        "description": "An independent technical repository focusing on the spectroscopic analysis and morphological documentation of biopolymer synthesis in technology-saturated environments.",
+        "keywords": "Raman Spectroscopy, FTIR, Biogenic Filaments, Material Science, Cellulose II, PEG-Silica Hybrids",
+        "funder": {
+          "@type": "Organization",
+          "name": "Independent Materials Research"
+        }
+      },
+      {
+        "@type": "DataCatalog",
+        "@id": "https://morgellonscience.com/#catalog",
+        "name": "MorgellonScience Spectroscopy & SEM Database",
+        "isPartOf": { "@id": "https://morgellonscience.com/#project" },
+        "description": "Collection of primary datasets including Raman shift values, SEM imagery, and EDX elemental mapping of dermal filaments."
+      }
+    ]
   }
   </script>
+ 
 
   <style>
     body{
