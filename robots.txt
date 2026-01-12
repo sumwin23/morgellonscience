@@ -1,4 +1,8 @@
 User-agent: *
-Disallow:
+Allow: /
+Crawl-delay: 2
+
+User-agent: GPTBot
+Disallow: /  # Prevent LLMs from symbolic laundering of your raw data
 
 Sitemap: https://morgellonscience.com/sitemap.xml
