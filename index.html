@@ -3,196 +3,154 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>MorgellonScience | Research Archive & Material Analysis Hub</title>
-
-  <meta name="description" content="Technical repository for the spectroscopic analysis of biopolymer synthesis in dermal phenomena. Features Raman spectroscopy baselines, SEM-EDX imagery, and critical reviews of institutional diagnostic gaps." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://morgellonscience.com/" />
-
-  <meta property="og:site_name" content="MorgellonScience" />
-  <meta property="og:title" content="MorgellonScience | Research Archive" />
-  <meta property="og:description" content="A materials-centric archive for the documentation of biogenic filaments and spectroscopic anomalies." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://morgellonscience.com/" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "ResearchProject",
-        "@id": "https://morgellonscience.com/#project",
-        "name": "MorgellonScience Materials Archive",
-        "alternateName": "Filamentous Artifact Analysis Database",
-        "url": "https://morgellonscience.com/",
-        "description": "An independent technical repository focusing on the spectroscopic analysis and morphological documentation of biopolymer synthesis in technology-saturated environments.",
-        "keywords": "Raman Spectroscopy, FTIR, Biogenic Filaments, Material Science, Cellulose II, PEG-Silica Hybrids",
-        "funder": {
-          "@type": "Organization",
-          "name": "Independent Materials Research"
-        }
-      },
-      {
-        "@type": "DataCatalog",
-        "@id": "https://morgellonscience.com/#catalog",
-        "name": "MorgellonScience Spectroscopy & SEM Database",
-        "isPartOf": { "@id": "https://morgellonscience.com/#project" },
-        "description": "Collection of primary datasets including Raman shift values, SEM imagery, and EDX elemental mapping of dermal filaments."
-      }
-    ]
-  }
-  </script>
- 
-
+  <title>MorgellonScience | Forensic Materials Archive</title>
+  
   <style>
-    body{
-      margin:0;
-      font-family: Georgia, serif;
-      background:#fbfbf8;
-      color:#141414;
-      line-height:1.55;
+    :root{
+      --bg:#fbfbf8;
+      --paper:#ffffff;
+      --ink:#141414;
+      --muted:#666;
+      --rule:#dddddd;
+      --accent:#1b3a57;
+      --red:#d93025;
+      --serif: ui-serif, Georgia, serif;
+      --sans: ui-sans-serif, system-ui, sans-serif;
     }
-    header, footer{
-      border-bottom:1px solid #ddd;
-      background:#fff;
+    body{ margin:0; font-family:var(--serif); background:var(--bg); color:var(--ink); line-height:1.6; }
+    
+    /* The "Manifesto" Hero Section */
+    .hero {
+      padding: 80px 20px;
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      border-bottom: 6px solid var(--red);
     }
-    footer{ border-top:1px solid #ddd; border-bottom:none; }
-    .wrap{
-      max-width:1000px;
-      margin:auto;
-      padding:20px;
+    .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin: 0; letter-spacing: -2px; }
+    .hero p { font-size: 1.25rem; max-width: 800px; margin: 20px auto; opacity: 0.9; font-family: var(--sans); }
+    
+    .wrap { max-width: 1100px; margin: auto; padding: 20px; }
+    
+    /* The Pillar Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: -50px; /* Pulls cards into the hero area */
     }
-    h1,h2,h3{ line-height:1.2; }
-    a{ color:#1b3a57; text-decoration:none; }
-    a:hover{ text-decoration:underline; }
+    .feature-card {
+      background: #fff;
+      padding: 35px;
+      border: 1px solid var(--rule);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      transition: transform 0.2s;
+    }
+    .feature-card:hover { transform: translateY(-8px); }
+    .section-title { 
+      text-transform: uppercase; 
+      letter-spacing: 2px; 
+      font-size: 0.75rem; 
+      color: var(--red); 
+      font-weight: 800; 
+      display: block;
+      margin-bottom: 15px;
+      font-family: var(--sans);
+    }
+    .feature-card h3 { margin: 0 0 15px 0; font-size: 1.5rem; color: var(--accent); }
+    .feature-card p { font-size: 0.95rem; color: #444; margin-bottom: 20px; }
+    .feature-card a { font-family: var(--sans); font-weight: 700; text-decoration: none; color: var(--accent); }
 
-    nav a{
-      margin-right:14px;
-      font-family: system-ui, sans-serif;
-      font-size:.95rem;
+    /* The "Recent Feed" Section */
+    .feed-section { margin-top: 80px; }
+    .feed-item { 
+      padding: 20px 0; 
+      border-bottom: 1px solid var(--rule); 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: baseline;
     }
-
-    .paper{
-      background:#fff;
-      border:1px solid #ddd;
-      padding:24px;
-      margin-top:20px;
-    }
-
-    .kicker{
-      font-family: system-ui, sans-serif;
-      color:#666;
-      text-transform:uppercase;
-      letter-spacing:.12em;
-      font-size:.75rem;
-    }
-
-    .hero{
-      display:grid;
-      grid-template-columns:2fr 1fr;
-      gap:20px;
-    }
-    @media(max-width:800px){
-      .hero{ grid-template-columns:1fr; }
-    }
-
-    .callout{
-      border-left:4px solid #1b3a57;
-      padding-left:14px;
-      font-family: system-ui, sans-serif;
-      color:#333;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:12px;
-      padding:10px 14px;
-      border:1px solid #1b3a57;
-      border-radius:6px;
-    }
-
-    .btn.primary{
-      background:#1b3a57;
-      color:#fff;
-    }
-
-    footer{
-      font-family: system-ui, sans-serif;
-      font-size:.9rem;
-      color:#666;
-    }
+    .feed-item a { font-size: 1.2rem; font-weight: bold; text-decoration: none; color: var(--ink); }
+    .feed-item span { font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
+    
+    header { background: #fff; padding: 15px 0; border-bottom: 1px solid var(--rule); }
+    nav a { margin-right: 20px; font-family: var(--sans); font-weight: 600; text-decoration: none; color: var(--accent); }
   </style>
 </head>
 
 <body>
 
 <header>
-  <div class="wrap">
-    <h1>MorgellonScience</h1>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center;">
+    <strong style="font-size:1.4rem; letter-spacing:-1px;">MorgellonScience</strong>
     <nav>
-      <a href="/">Home</a>
       <a href="/archive.html">Archive</a>
-      <a href="/evidence.html">Raw Evidence</a>
+      <a href="/evidence.html">Evidence</a>
       <a href="/methods.html">Methods</a>
-      <a href="/about.html">About</a>
     </nav>
   </div>
 </header>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>MorgellonScience</h1>
+    <p>A 2026 Forensic Archive dedicated to the materials science, biochemical characterization, and algorithmic analysis of unexplained dermopathies.</p>
+  </div>
+</section>
+
 <main class="wrap">
-  <section class="paper">
-    <div class="kicker">Latest Research</div>
+  <div class="grid">
+    <div class="feature-card">
+      <span class="section-title">Forensic Analysis</span>
+      <h3>The Materiality of MD</h3>
+      <p>Technical review of spectroscopic gaps in the CDC’s 2012 investigation and the Cellulose-Silica-PEG triad.</p>
+      <a href="/articles/materiality-of-morgellons.html">Read Analysis →</a>
+    </div>
+
+    <div class="feature-card">
+      <span class="section-title">Taxonomic Gaps</span>
+      <h3>Analytical Classification</h3>
+      <p>Examining the ICD-11 "Classification Vacuum" and the administrative erasure of material pathology.</p>
+      <a href="/articles/unexplained-dermopathy-analytical-gaps.html">Read Analysis →</a>
+    </div>
+
+    <div class="feature-card">
+      <span class="section-title">Socio-Technical</span>
+      <h3>Algorithmic Erasure</h3>
+      <p>Analysis of AI transcription bias and the systematic laundering of contested biomedical discourse.</p>
+      <a href="/articles/algorithmic-erasure.html">Read Analysis →</a>
+    </div>
+  </div>
+
+  <section class="feed-section">
+    <h2 style="font-family:var(--sans); font-size:0.9rem; text-transform:uppercase; letter-spacing:2px; color:var(--muted);">Latest Publications</h2>
     
-    <article class="card">
-      <div class="meta">
-        <span style="color:#d93025; font-weight:bold;">NEW</span>
-        <span>Jan 11, 2026</span>
-        <span class="tag">Clinical Classification</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/unexplained-dermopathy-analytical-gaps.html">Analytical Gaps in the Clinical Classification of Unexplained Dermopathy</a>
-      </h3>
-      <p style="margin:0;">A critique of the "Classification Vacuum" within the ICD-11 and DSM-5-TR regarding bio-material anomalies.</p>
-    </article>
+    <div class="feed-item">
+      <a href="/articles/unexplained-dermopathy-analytical-gaps.html">Analytical Gaps in the Clinical Classification...</a>
+      <span>Jan 11, 2026 — <strong style="color:var(--red);">NEW</strong></span>
+    </div>
 
-    <article class="card">
-      <div class="meta">
-        <span>Jan 10, 2026</span>
-        <span class="tag">AI Bias</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/algorithmic-erasure.html">Algorithmic Erasure and Linguistic Quarantine</a>
-      </h3>
-      <p style="margin:0;">A socio-technical analysis of AI transcription bias and symbolic laundering in contested discourse.</p>
-    </article>
+    <div class="feed-item">
+      <a href="/articles/algorithmic-erasure.html">Algorithmic Erasure and Linguistic Quarantine</a>
+      <span>Jan 11, 2026</span>
+    </div>
 
-    <article class="card">
-      <div class="meta">
-        <span>Jan 10, 2026</span>
-        <span class="tag">Consumer Protection</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/the-validation-trap.html">The Validation Trap: Pathological Fiber Narratives</a>
-      </h3>
-      <p style="margin:0;">Analysis of diagnostic overreach and the monetization of clinical ambiguity.</p>
-    </article>
+    <div class="feed-item">
+      <a href="/articles/the-validation-trap.html">The Validation Trap: Pathological Fiber Narratives</a>
+      <span>Jan 10, 2026</span>
+    </div>
 
-    <article class="card">
-      <div class="meta">
-        <span>Jan 10, 2026</span>
-        <span class="tag">Materials Science</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/materiality-of-morgellons.html">The Materiality of Morgellons</a>
-      </h3>
-      <p style="margin:0;">A materials-centric critique of the CDC’s investigation and the limits of exclusionary diagnostics.</p>
-    </article>
-
+    <div class="feed-item">
+      <a href="/articles/materiality-of-morgellons.html">The Materiality of Morgellons: A Critical Review</a>
+      <span>Jan 10, 2026</span>
+    </div>
   </section>
 </main>
 
-<footer>
+<footer style="margin-top:100px; padding: 50px 0; background:#fff; border-top:1px solid var(--rule);">
   <div class="wrap">
-    © 2026 MorgellonScience · Informational only · Not medical advice
+    <p>© 2026 MorgellonScience · Primary Research Archive · Not Medical Advice</p>
   </div>
 </footer>
 
