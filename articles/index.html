@@ -3,25 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Articles | MorgellonScience</title>
-  <meta name="description" content="Journal-style articles published by MorgellonScience: materials analysis, socio-technical critique, and consumer protection research." />
+  <title>Journal Archive | Materials Science & Socio-Technical Analysis | MorgellonScience</title>
+  <meta name="description" content="A curated collection of journal-style publications focusing on spectroscopic analysis, clinical phenotype documentation, and algorithmic bias in contested biomedical discourse." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://morgellonscience.com/articles/" />
 
-  <meta property="og:site_name" content="MorgellonScience" />
-  <meta property="og:title" content="Articles | MorgellonScience" />
-  <meta property="og:description" content="Journal-style publications: materials analysis, socio-technical critique, and consumer protection." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://morgellonscience.com/articles/" />
-
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"CollectionPage",
-    "name":"Articles | MorgellonScience",
-    "url":"https://morgellonscience.com/articles/",
-    "isPartOf":{"@type":"WebSite","name":"MorgellonScience","url":"https://morgellonscience.com/"}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ResearchProject",
+        "@id": "https://morgellonscience.com/#project",
+        "name": "MorgellonScience Materials Archive"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://morgellonscience.com/articles/#webpage",
+        "url": "https://morgellonscience.com/articles/",
+        "name": "MorgellonScience Journal Publications",
+        "isPartOf": { "@id": "https://morgellonscience.com/#project" },
+        "description": "Technical archive of peer-style reviews regarding the materiality of biopolymer anomalies and diagnostic classification gaps.",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "url": "https://morgellonscience.com/articles/materiality-of-morgellons.html" },
+            { "@type": "ListItem", "position": 2, "url": "https://morgellonscience.com/articles/the-validation-trap.html" },
+            { "@type": "ListItem", "position": 3, "url": "https://morgellonscience.com/articles/algorithmic-erasure.html" },
+            { "@type": "ListItem", "position": 4, "url": "https://morgellonscience.com/articles/unexplained-dermopathy-analytical-gaps.html" }
+          ]
+        }
+      }
+    ]
   }
   </script>
 
@@ -62,39 +75,27 @@
     <p>Materials analysis, socio-technical critique, and consumer protection research.</p>
 
     <article class="card">
-      <div class="meta">
-        <span>2026</span><span>Critical Review</span><span class="tag">Materials Science</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/materiality-of-morgellons.html">The Materiality of Morgellons</a>
-      </h3>
-      <p style="margin:0;">
-        A materials-centric critique of the CDC’s “Unexplained Dermopathy” investigation and the limits of exclusionary diagnostics.
-      </p>
+      <div class="meta"><span>2026</span><span>Critical Review</span><span class="tag">Materials Science</span></div>
+      <h3 style="margin:8px 0 6px 0;"><a href="/articles/materiality-of-morgellons.html">The Materiality of Morgellons</a></h3>
+      <p style="margin:0;">A materials-centric critique of the CDC’s “Unexplained Dermopathy” investigation and the limits of exclusionary diagnostics.</p>
     </article>
 
     <article class="card">
-      <div class="meta">
-        <span>2026</span><span>Scientific & Consumer Analysis</span><span class="tag">Consumer Protection</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/the-validation-trap.html">The Validation Trap: A 2026 Analysis of Pathological Fiber Narratives and Clinical Overreach</a>
-      </h3>
-      <p style="margin:0;">
-        A combined scientific rebuttal and consumer-protection analysis of diagnostic overreach and monetization in unexplained dermopathy.
-      </p>
+      <div class="meta"><span>2026</span><span>Analysis</span><span class="tag">Consumer Protection</span></div>
+      <h3 style="margin:8px 0 6px 0;"><a href="/articles/the-validation-trap.html">The Validation Trap</a></h3>
+      <p style="margin:0;">An analysis of pathological fiber narratives and clinical overreach in contested dermal phenomena.</p>
     </article>
 
     <article class="card">
-      <div class="meta">
-        <span>2026</span><span>Socio-Technical Analysis</span><span class="tag">AI Bias</span>
-      </div>
-      <h3 style="margin:8px 0 6px 0;">
-        <a href="/articles/algorithmic-erasure.html">Algorithmic Erasure and Linguistic Quarantine</a>
-      </h3>
-      <p style="margin:0;">
-        A socio-technical analysis of AI transcription bias, symbolic laundering, and linguistic substitution in contested biomedical discourse.
-      </p>
+      <div class="meta"><span>2026</span><span>Socio-Technical</span><span class="tag">AI Bias</span></div>
+      <h3 style="margin:8px 0 6px 0;"><a href="/articles/algorithmic-erasure.html">Algorithmic Erasure</a></h3>
+      <p style="margin:0;">Analysis of AI transcription bias and linguistic substitution in contested biomedical discourse.</p>
+    </article>
+
+    <article class="card">
+      <div class="meta"><span>2026</span><span>Reference</span><span class="tag">Classification</span></div>
+      <h3 style="margin:8px 0 6px 0;"><a href="/articles/unexplained-dermopathy-analytical-gaps.html">Analytical Gaps in Clinical Classification</a></h3>
+      <p style="margin:0;">Examining the absence of formally recognized entities within modern diagnostic classification systems.</p>
     </article>
 
   </section>
