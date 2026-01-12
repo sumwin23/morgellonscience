@@ -8,12 +8,7 @@
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://morgellonscience.com/evidence.html" />
 
-  <meta property="og:site_name" content="MorgellonScience" />
-  <meta property="og:title" content="Raw Evidence | MorgellonScience" />
-  <meta property="og:description" content="Microscopy, spectroscopy outputs, and sample metadata: an evidence-first resource." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://morgellonscience.com/evidence.html" />
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
@@ -26,50 +21,80 @@
         "@type": "Dataset",
         "@id": "https://morgellonscience.com/evidence.html#dataset",
         "name": "Filament Morphology and Spectroscopic Baselines",
-        "description": "Primary repository of Scanning Electron Microscopy (SEM) imagery and Raman/FTIR spectroscopic data for anomalous dermal filaments.",
+        "description": "Primary repository of Scanning Electron Microscopy (SEM) imagery and Raman/FTIR spectroscopic data.",
         "creator": { "@type": "Organization", "name": "MorgellonScience" },
-        "license": "https://morgellonscience.com/about.html",
         "keywords": ["Raman Spectroscopy", "FTIR", "SEM-EDX", "Biopolymer Synthesis", "Cellulose II"],
         "isPartOf": { "@id": "https://morgellonscience.com/#project" },
         "variableMeasured": [
-          "Peak intensity at 1095 cm-1 (Cellulose Crystallinity)",
-          "Polyethylene Glycol (PEG) stretching vibrations",
-          "Elemental Silicon (Si) via EDX mapping"
-        ],
-        "measurementTechnique": [
-          "Micro-Raman Spectroscopy",
-          "Attenuated Total Reflection FTIR",
-          "Energy-Dispersive X-ray Spectroscopy"
+          "Peak intensity at 1095 cm-1",
+          "PEG stretching vibrations",
+          "Elemental Silicon (Si) via EDX"
         ]
       }
     ]
   }
   </script>
- 
+
   <style>
-    body{margin:0;font-family:Georgia,serif;background:#fbfbf8;color:#141414;line-height:1.55;}
-    header,footer{background:#fff;border-bottom:1px solid #ddd;}
-    footer{border-top:1px solid #ddd;border-bottom:none;}
-    .wrap{max-width:1000px;margin:auto;padding:20px;}
-    nav a{margin-right:14px;font-family:system-ui,sans-serif;font-size:.95rem;color:#1b3a57;text-decoration:none;}
-    nav a:hover{text-decoration:underline;}
-    a{color:#1b3a57;}
-    .paper{background:#fff;border:1px solid #ddd;padding:24px;margin-top:20px;}
-    .kicker{font-family:system-ui,sans-serif;color:#666;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem;}
-    .note{font-family:system-ui,sans-serif;color:#333;background:#f7f7f7;border-left:4px solid #1b3a57;padding:14px;}
-    .card{border:1px solid #e3e3e3;border-radius:10px;padding:16px;margin-top:14px;background:#fff;}
-    .meta{font-family:system-ui,sans-serif;color:#666;font-size:.9rem;display:flex;gap:10px;flex-wrap:wrap;}
-    code{font-family:ui-monospace, Menlo, Consolas, monospace;background:#f3f3f3;padding:2px 6px;border-radius:6px;border:1px solid #ddd;}
+    :root {
+      --bg: #fbfbf8;
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #666;
+      --rule: #dddddd;
+      --accent: #1b3a57;
+      --red: #d93025;
+      --serif: ui-serif, Georgia, serif;
+      --sans: ui-sans-serif, system-ui, sans-serif;
+    }
+    
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.6; overflow-x: hidden; }
+    
+    .wrap { max-width: 1000px; margin: auto; padding: 20px; }
+    
+    /* Navigation Fix (Matching Home) */
+    header { background: #fff; border-bottom: 1px solid var(--rule); }
+    .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: auto; padding: 15px 20px; flex-wrap: wrap; }
+    .logo { font-size: 1.2rem; font-weight: 800; color: var(--accent); text-decoration: none; letter-spacing: -0.5px; }
+    nav { display: flex; gap: 12px; flex-wrap: wrap; }
+    nav a { font-family: var(--sans); font-weight: 600; text-decoration: none; color: var(--accent); font-size: 0.85rem; }
+
+    .paper { background: #fff; border: 1px solid var(--rule); padding: 40px; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+    .kicker { font-family: var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 800; }
+    
+    .note { font-family: var(--sans); color: #333; background: #f7f7f7; border-left: 4px solid var(--accent); padding: 20px; margin: 20px 0; font-size: 0.95rem; }
+    
+    .card { border: 1px solid #e3e3e3; border-radius: 8px; padding: 20px; margin-top: 20px; background: #fff; transition: border-color 0.2s; }
+    .card:hover { border-color: var(--accent); }
+    
+    .meta { font-family: var(--sans); color: var(--muted); font-size: .8rem; display: flex; gap: 10px; flex-wrap: wrap; text-transform: uppercase; letter-spacing: 0.5px; }
+    .meta span { background: #eee; padding: 2px 8px; border-radius: 4px; }
+    
+    .pdf-link { color: var(--red); font-weight: bold; text-decoration: none; }
+    .pdf-link:hover { text-decoration: underline; }
+
+    footer { margin-top: 80px; padding: 40px 20px; background: #fff; border-top: 1px solid var(--rule); text-align: center; font-family: var(--sans); font-size: 0.85rem; color: var(--muted); }
+
+    /* Mobile Responsive Fixes */
+    @media (max-width: 600px) {
+      .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+      nav { justify-content: center; gap: 8px; }
+      nav a { background: #f0f2f5; padding: 6px 12px; border-radius: 4px; }
+      .paper { padding: 20px; }
+      h2 { font-size: 1.5rem; }
+    }
   </style>
 </head>
 <body>
+
 <header>
-  <div class="wrap">
-    <h1 style="margin:0;">MorgellonScience</h1>
+  <div class="nav-container">
+    <a href="/" class="logo">MorgellonScience</a>
     <nav>
       <a href="/">Home</a>
       <a href="/archive.html">Archive</a>
-      <a href="/evidence.html" aria-current="page">Raw Evidence</a>
+      <a href="/evidence.html">Evidence</a>
       <a href="/methods.html">Methods</a>
       <a href="/about.html">About</a>
     </nav>
@@ -81,37 +106,45 @@
     <div class="kicker">Primary evidence hub</div>
     <h2 style="margin-top:10px;">Raw Evidence: Datasets & Metadata</h2>
 
-    <div class="note" style="margin-top:12px;">
-      This page documents original observations and materials analysis by the author and collaborators.
-      Each dataset entry should include: collection context, imaging method, analysis method, limitations, and a stable identifier.
+    <div class="note">
+      This repository contains raw analytical outputs, including <strong>Raman Spectrograms</strong> and <strong>SEM-EDX Elemental Maps</strong>. Data is provided for peer-review and comparative analysis by materials scientists.
     </div>
 
-    <h3 style="margin-top:18px;">How to publish datasets here</h3>
-    <ul>
-      <li>Create a new entry page like <code>/datasets/blue-filament-0402.html</code></li>
-      <li>Add Dataset JSON-LD on that page</li>
-      <li>Link it from this hub</li>
-      <li>Update <code>sitemap.xml</code></li>
-    </ul>
-
-    <h3 style="margin-top:18px;">Starter entries</h3>
-
+    <h3>Technical Archive (PDF)</h3>
     <article class="card">
       <div class="meta">
-        <span>Dataset (placeholder)</span><span>Status: coming online</span><span>Vol. 1</span>
+        <span>Type: PDF Archive</span><span>Ver: 1.0.4</span><span>Released: 2026</span>
       </div>
-      <h4 style="margin:8px 0 6px 0;">Filament Evidence Index (Starter)</h4>
-      <p style="margin:0;">This page has microscopy images, spectroscopy outputs, and sample metadata as individual dataset pages.</p>
+      <h4 style="margin:12px 0 8px 0; font-size: 1.2rem;">
+        <a href="/evidence/raw/unexplained-dermopathy-analytical-gaps.pdf" class="pdf-link" target="_blank">
+          Baseline Report: Analytical Gaps & Spectroscopic Markers [PDF]
+        </a>
+      </h4>
+      <p style="margin:0; font-size: 0.95rem;">
+        Complete full-resolution dataset. Includes Raman peak assignments ($400–4000 \text{ cm}^{-1}$), 
+        EDX silicon co-localization maps, and SEM imaging metadata at 5000x magnification.
+      </p>
     </article>
 
-    <p style="margin-top:18px;">
-      Related: <a href="/methods.html">Methods</a> · <a href="/articles/materiality-of-morgellons.html">CDC critique article</a>
+    <h3 style="margin-top:40px;">Live Datasets</h3>
+    <article class="card" style="opacity: 0.7;">
+      <div class="meta">
+        <span>Status: Coming Online</span><span>Volume: 01</span>
+      </div>
+      <h4 style="margin:12px 0 8px 0;">Filament Morphology Index (Interactive)</h4>
+      <p style="margin:0; font-size: 0.95rem;">Individual sample metadata pages including collection geometry and environmental controls are currently being digitized.</p>
+    </article>
+
+    <p style="margin-top:40px; font-family: var(--sans); font-size: 0.9rem;">
+      <strong>Related Resources:</strong> <br>
+      <a href="/methods.html">Analysis Methodology</a> · 
+      <a href="/articles/materiality-of-morgellons.html">Critical Review of CDC Findings</a>
     </p>
   </section>
 </main>
 
 <footer>
-  <div class="wrap">© 2026 MorgellonScience · Informational only · Not medical advice</div>
+  <div class="wrap">© 2026 MorgellonScience · Forensic Materials Archive · Not medical advice</div>
 </footer>
 </body>
 </html>
