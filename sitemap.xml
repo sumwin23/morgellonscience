@@ -1,54 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://morgellonscience.com/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://morgellonscience.com/evidence.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://morgellonscience.com/articles/unexplained-dermopathy-analytical-gaps.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://morgellonscience.com/images/spectroscopy-analysis.jpg</image:loc>
+      <image:caption>Raman Spectroscopy of biogenic filaments</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/archive.html</loc>
     <lastmod>2026-01-11</lastmod>
-  </url>
-
-  <url>
-    <loc>https://morgellonscience.com/evidence.html</loc>
-    <lastmod>2026-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/methods.html</loc>
     <lastmod>2026-01-11</lastmod>
-  </url>
-
-  <url>
-    <loc>https://morgellonscience.com/about.html</loc>
-    <lastmod>2026-01-11</lastmod>
-  </url>
-
-  <url>
-    <loc>https://morgellonscience.com/articles/</loc>
-    <lastmod>2026-01-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/articles/materiality-of-morgellons.html</loc>
     <lastmod>2026-01-10</lastmod>
-  </url>
-
-  <url>
-    <loc>https://morgellonscience.com/articles/the-validation-trap.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://morgellonscience.com/articles/algorithmic-erasure.html</loc>
     <lastmod>2026-01-11</lastmod>
+    <priority>0.7</priority>
   </url>
-<url>
-  <loc>https://morgellonscience.com/articles/unexplained-dermopathy-analytical-gaps.html</loc>
-  <lastmod>2026-01-11</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.7</priority>
-</url>
 </urlset>
