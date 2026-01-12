@@ -3,27 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | MorgellonScience</title>
-  <meta name="description" content="About MorgellonScience: purpose, editorial approach, disclosure principles, and how to cite this archive." />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
-  <link rel="canonical" href="https://morgellonscience.com/about.html" />
-
-  <meta property="og:site_name" content="MorgellonScience" />
-  <meta property="og:title" content="About | MorgellonScience" />
-  <meta property="og:description" content="Purpose, editorial approach, disclosures, and citation guidance." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://morgellonscience.com/about.html" />
+<title>About | MorgellonScience</title>
 
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"AboutPage",
-    "name":"About MorgellonScience",
-    "url":"https://morgellonscience.com/about.html",
-    "isPartOf":{"@type":"WebSite","name":"MorgellonScience","url":"https://morgellonscience.com/"}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ResearchProject",
+        "@id": "https://morgellonscience.com/#project",
+        "name": "MorgellonScience Materials Archive",
+        "alternateName": "Filamentous Artifact Analysis Database",
+        "url": "https://morgellonscience.com/",
+        "description": "A technical repository focusing on the spectroscopic analysis and morphological documentation of biopolymer synthesis in unexplained dermopathy.",
+        "keywords": "Raman Spectroscopy, FTIR, Biogenic Filaments, Material Science, Taxonomic Defiance, Scanning Electron Microscopy",
+        "funder": {
+          "@type": "Organization",
+          "name": "Independent Materials Research"
+        }
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://morgellonscience.com/about.html#webpage",
+        "url": "https://morgellonscience.com/about.html",
+        "name": "About MorgellonScience",
+        "isPartOf": { "@id": "https://morgellonscience.com/#project" },
+        "description": "Information regarding the scope, editorial standards, and citation methods of the MorgellonScience archive."
+      }
+    ]
   }
   </script>
-
   <style>
     body{margin:0;font-family:Georgia,serif;background:#fbfbf8;color:#141414;line-height:1.55;}
     header,footer{background:#fff;border-bottom:1px solid #ddd;}
