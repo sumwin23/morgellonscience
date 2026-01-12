@@ -13,22 +13,39 @@
   <meta property="og:description" content="Microscopy, spectroscopy outputs, and sample metadata: an evidence-first resource." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://morgellonscience.com/evidence.html" />
-
-  <!-- Dataset schema: duplicate this block per dataset entry as you publish -->
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Dataset",
-    "name":"Filament Evidence Index (Starter)",
-    "description":"Index of primary microscopy and spectroscopy datasets documenting filamentous structures observed in dermal specimens. This page is a hub; individual datasets should be published as separate entries with their own metadata.",
-    "url":"https://morgellonscience.com/evidence.html",
-    "creator":{"@type":"Organization","name":"MorgellonScience"},
-    "license":"https://morgellonscience.com/about.html",
-    "keywords":["microscopy","spectroscopy","filament","cellulose","silica","PEG","SEM","FTIR","EDX"],
-    "isPartOf":{"@type":"WebSite","name":"MorgellonScience","url":"https://morgellonscience.com/"}
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ResearchProject",
+        "@id": "https://morgellonscience.com/#project",
+        "name": "MorgellonScience Materials Archive"
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://morgellonscience.com/evidence.html#dataset",
+        "name": "Filament Morphology and Spectroscopic Baselines",
+        "description": "Primary repository of Scanning Electron Microscopy (SEM) imagery and Raman/FTIR spectroscopic data for anomalous dermal filaments.",
+        "creator": { "@type": "Organization", "name": "MorgellonScience" },
+        "license": "https://morgellonscience.com/about.html",
+        "keywords": ["Raman Spectroscopy", "FTIR", "SEM-EDX", "Biopolymer Synthesis", "Cellulose II"],
+        "isPartOf": { "@id": "https://morgellonscience.com/#project" },
+        "variableMeasured": [
+          "Peak intensity at 1095 cm-1 (Cellulose Crystallinity)",
+          "Polyethylene Glycol (PEG) stretching vibrations",
+          "Elemental Silicon (Si) via EDX mapping"
+        ],
+        "measurementTechnique": [
+          "Micro-Raman Spectroscopy",
+          "Attenuated Total Reflection FTIR",
+          "Energy-Dispersive X-ray Spectroscopy"
+        ]
+      }
+    ]
   }
   </script>
-
+ 
   <style>
     body{margin:0;font-family:Georgia,serif;background:#fbfbf8;color:#141414;line-height:1.55;}
     header,footer{background:#fff;border-bottom:1px solid #ddd;}
