@@ -36,34 +36,65 @@
     ]
   }
   </script>
-
-  <style>
-    :root{
-      --bg:#fbfbf8;
-      --paper:#ffffff;
-      --ink:#141414;
-      --muted:#5b5b5b;
-      --rule:#dbdbdb;
-      --accent:#1b3a57;
-      --shadow:0 10px 30px rgba(0,0,0,.06);
-      --serif:ui-serif,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
-      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      --max:1000px;
+<style>
+    :root {
+      --bg: #fbfbf8;
+      --paper: #ffffff;
+      --ink: #141414;
+      --muted: #5b5b5b;
+      --rule: #dbdbdb;
+      --accent: #1b3a57;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      --max: 1000px;
     }
 
-    body{margin:0;font-family:var(--serif);background:var(--bg);color:var(--ink);line-height:1.65;}
-    header,footer{background:#fff;border-bottom:1px solid var(--rule);}
-    footer{border-top:1px solid var(--rule);border-bottom:none;color:var(--muted);font-family:var(--sans);font-size:.95rem;}
-    .wrap{max-width:var(--max);margin:auto;padding:20px;}
-    nav a{margin-right:14px;font-family:var(--sans);font-size:.95rem;text-decoration:none;color:var(--accent);}
-    nav a:hover{ text-decoration:underline; }
-    .paper{background:var(--paper);border:1px solid var(--rule);padding:40px;margin:20px auto;box-shadow:var(--shadow);}
-    .kicker{font-family:var(--sans);color:var(--muted);text-transform:uppercase;letter-spacing:.15em;font-size:.7rem;font-weight:700;}
-    h1{ font-size: 2.3rem; line-height:1.1; margin:10px 0; }
-    h2{ margin-top:35px; border-top: 1px solid var(--rule); padding-top: 20px; font-variant-caps: small-caps; }
-    h3{ margin-top:20px; font-family:var(--sans); color: var(--accent); }
-    .meta{display:flex;gap:12px;font-family:var(--sans);font-size:.85rem;color:var(--muted);margin-bottom: 25px;}
-    blockquote{ font-style: italic; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 20px; margin: 25px 0; }
+    /* Prevent horizontal overflow on mobile */
+    * { box-sizing: border-box; }
+    html, body { overflow-x: hidden; width: 100%; }
+
+    body { margin: 0; font-family: var(--serif); background: var(--bg); color: var(--ink); line-height: 1.65; }
+    
+    header, footer { background: #fff; border-bottom: 1px solid var(--rule); }
+    footer { border-top: 1px solid var(--rule); border-bottom: none; color: var(--muted); font-family: var(--sans); font-size: .95rem; }
+    
+    /* Responsive Wrapper */
+    .wrap { max-width: var(--max); margin: auto; padding: 15px; } /* Slightly tighter padding for mobile */
+    
+    /* Nav: Wrap links so they don't go off screen */
+    nav { display: flex; flex-wrap: wrap; gap: 10px; }
+    nav a { font-family: var(--sans); font-size: .9rem; text-decoration: none; color: var(--accent); white-space: nowrap; }
+    nav a:hover { text-decoration: underline; }
+
+    /* The Paper: Responsive padding */
+    .paper { 
+      background: var(--paper); 
+      border: 1px solid var(--rule); 
+      padding: 25px; /* Mobile Padding */
+      margin: 10px auto; 
+      box-shadow: var(--shadow); 
+    }
+
+    /* Header sizing: Responsive using clamp */
+    .kicker { font-family: var(--sans); color: var(--muted); text-transform: uppercase; letter-spacing: .15em; font-size: .7rem; font-weight: 700; }
+    
+    /* Clamp(min, preferred, max) - Shrinks H1 on mobile, grows on desktop */
+    h1 { font-size: clamp(1.6rem, 5vw, 2.3rem); line-height: 1.1; margin: 10px 0; }
+    
+    h2 { margin-top: 35px; border-top: 1px solid var(--rule); padding-top: 20px; font-variant-caps: small-caps; font-size: clamp(1.3rem, 4vw, 1.8rem); }
+    h3 { margin-top: 20px; font-family: var(--sans); color: var(--accent); font-size: 1.1rem; }
+    
+    .meta { display: flex; flex-wrap: wrap; gap: 12px; font-family: var(--sans); font-size: .85rem; color: var(--muted); margin-bottom: 25px; }
+    blockquote { font-style: italic; color: var(--muted); border-left: 3px solid var(--accent); padding-left: 20px; margin: 25px 0; }
+
+    /* Desktop Adjustments */
+    @media (min-width: 768px) {
+      .wrap { padding: 20px; }
+      .paper { padding: 40px; margin: 20px auto; }
+      nav { gap: 0; }
+      nav a { margin-right: 14px; font-size: .95rem; }
+    }
   </style>
 </head>
 <body>
