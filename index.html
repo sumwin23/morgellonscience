@@ -33,172 +33,88 @@
   </script>
 
   <style>
-:root {
-  /* The Sophisticated Palette */
-  --bg: #fdfcf8;      /* Professional Cream/Off-White */
-  --paper: #ffffff;   /* Pure White for the article body */
-  --ink: #1a1a1a;     /* Near-black for readability */
-  --muted: #6b6b6b;   /* Grey for metadata */
-  --rule: #e5e2d9;    /* Cream-toned borders */
-  --accent: #1b3a57;  /* Deep Navy Accents */
-  
-  /* Typography */
-  --serif: "Georgia", "Times New Roman", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+    :root {
+      --bg: #fdfcf8;      /* Cream background */
+      --paper: #ffffff;
+      --ink: #1a1a1a;
+      --muted: #6b6b6b;
+      --rule: #e5e2d9;
+      --accent: #1b3a57;  /* Deep Navy */
+      --red: #a52a2a;     /* Professional deep red for "NEW" tags */
+      --serif: "Georgia", serif;
+      --sans: "Inter", -apple-system, system-ui, sans-serif;
+    }
 
-/* Global Foundations */
-* { box-sizing: border-box; }
+    * { box-sizing: border-box; }
+    body { 
+      margin: 0; padding: 0; 
+      background: var(--bg); 
+      color: var(--ink); 
+      font-family: var(--serif); 
+      line-height: 1.6;
+    }
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--bg);
-  color: var(--ink);
-  font-family: var(--serif);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-}
+    /* Layout Containers */
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+    
+    /* Header & Nav Fixes */
+    header { background: var(--paper); border-bottom: 1px solid var(--rule); padding: 20px 0; }
+    .nav-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+    .logo { font-family: var(--sans); font-weight: 800; font-size: 1.2rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+    
+    nav { display: flex; gap: 15px; }
+    nav a { font-family: var(--sans); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); text-decoration: none; }
 
-/* Header & Nav - Matching Homepage Sophistication */
-header {
-  background: var(--paper);
-  border-bottom: 1px solid var(--rule);
-  padding: 1.25rem 0;
-}
+    /* Hero Section */
+    .hero { padding: 60px 0; border-bottom: 1px solid var(--rule); }
+    .hero h1 { font-size: 2.5rem; margin: 0 0 10px 0; line-height: 1.1; }
+    .hero p { font-size: 1.1rem; color: var(--muted); max-width: 700px; margin: 0; }
 
-.wrap {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
+    /* Grid & Cards - Critical for Mobile */
+    .grid { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px; 
+      margin: 40px 0; 
+    }
 
-header h1 {
-  margin: 0 0 10px 0 !important;
-  font-family: var(--sans) !important;
-  font-size: 1.35rem !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.02em !important;
-  color: var(--ink);
-  text-transform: none;
-}
+    .feature-card { 
+      background: var(--paper); 
+      border: 1px solid var(--rule); 
+      padding: 30px; 
+      text-decoration: none; 
+      color: inherit; 
+      transition: transform 0.2s ease;
+      display: block;
+    }
+    .feature-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    
+    .section-title { font-family: var(--sans); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; color: var(--muted); letter-spacing: 0.1rem; }
+    .feature-card h3 { font-family: var(--sans); font-size: 1.25rem; margin: 15px 0 10px 0; color: var(--accent); }
+    .feature-card p { font-size: 0.95rem; margin-bottom: 20px; color: var(--muted); }
+    .read-more { font-family: var(--sans); font-size: 0.8rem; font-weight: 700; color: var(--ink); }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
+    /* Feed Items */
+    .feed-section { margin: 60px 0; }
+    .feed-item { 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: baseline; 
+      padding: 15px 0; 
+      border-bottom: 1px solid var(--rule); 
+      gap: 20px;
+    }
+    .feed-item a { color: var(--ink); text-decoration: none; font-weight: 600; }
+    .feed-item span { font-family: var(--sans); font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
 
-nav a {
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  text-decoration: none;
-  transition: opacity 0.2s ease;
-}
+    /* Mobile Tweaks */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 1.8rem; }
+      .nav-container { flex-direction: column; align-items: flex-start; }
+      .feed-item { flex-direction: column; gap: 5px; }
+    }
 
-nav a:hover {
-  opacity: 0.7;
-}
-
-/* The Paper Element - Mobile Friendly Archival Look */
-.paper {
-  background: var(--paper);
-  border: 1px solid var(--rule);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-  margin: 1.5rem auto;
-  padding: 2rem 1.25rem; /* Mobile padding */
-}
-
-/* Sophisticated desktop spacing */
-@media (min-width: 768px) {
-  .paper {
-    padding: 5rem 6rem;
-    margin: 3.5rem auto;
-  }
-}
-
-/* Typography Hierarchy */
-h1 {
-  font-size: 1.85rem;
-  line-height: 1.2;
-  color: var(--ink);
-  margin-bottom: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  h1 { font-size: 2.8rem; }
-}
-
-h2 {
-  font-family: var(--sans);
-  font-size: 1.15rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-top: 3rem;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.kicker {
-  font-family: var(--sans);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: 0.75rem;
-}
-
-.meta {
-  font-family: var(--sans);
-  color: var(--muted);
-  font-size: 0.8rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 2rem;
-}
-
-/* Abstract & Technical Callouts */
-.abstract {
-  background: #fdfdfb;
-  border: 1px solid var(--rule);
-  padding: 1.5rem;
-  font-style: italic;
-  margin: 2.5rem 0;
-  border-radius: 2px;
-}
-
-.tech-box {
-  background: #f4f7f9;
-  border-left: 3px solid var(--accent);
-  padding: 1.5rem;
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  margin: 2rem 0;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 4rem 0;
-  font-family: var(--sans);
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
-  color: var(--muted);
-  border-top: 1px solid var(--rule);
-  background: var(--paper);
-}
-
-/* Image & Table Responsiveness */
-img, table {
-  max-width: 100%;
-  height: auto;
+    footer { padding: 40px 0; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 0.8rem; color: var(--muted); text-align: center; }
   </style>
 </head>
 
@@ -252,7 +168,7 @@ img, table {
     <h2 style="font-family:var(--sans); font-size:0.8rem; text-transform:uppercase; letter-spacing:2px; color:var(--muted); margin-bottom: 20px;">Latest Publications</h2>
     
     <div class="feed-item">
-<a href="/evidence/raw/unexplained-dermopathy-analytical-gaps-2026.pdf" target="_blank" style="color:var(--red); font-weight:bold; text-decoration:none;">View PDF Report →</a>
+      <a href="/evidence/raw/unexplained-dermopathy-analytical-gaps-2026.pdf" target="_blank" style="color:var(--red); font-weight:bold; text-decoration:none;">View PDF Report →</a>
       <span>Jan 11, 2026 — <strong style="color:var(--red);">NEW</strong></span>
     </div>
 
