@@ -1,16 +1,20 @@
-/* style.css - MorgellonScience Professional Forensic Theme */
+/* style.css - MorgellonScience Forensic Archive Theme */
 
 :root {
-  --bg: #fdfcf8;      /* The sophisticated cream background */
-  --paper: #ffffff;
-  --ink: #181818;
-  --muted: #6b6b6b;
-  --rule: #e0ddd5;    /* Subtle cream-toned border */
-  --accent: #1b3a57;  /* Deep Navy */
+  /* The Sophisticated Palette */
+  --bg: #fdfcf8;      /* Professional Cream/Off-White */
+  --paper: #ffffff;   /* Pure White for the article body */
+  --ink: #1a1a1a;     /* Near-black for readability */
+  --muted: #6b6b6b;   /* Grey for metadata */
+  --rule: #e5e2d9;    /* Cream-toned borders */
+  --accent: #1b3a57;  /* Deep Navy Accents */
+  
+  /* Typography */
   --serif: "Georgia", "Times New Roman", serif;
-  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Global Foundations */
 * { box-sizing: border-box; }
 
 body {
@@ -23,11 +27,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Header & Navigation */
+/* Header & Nav - Matching Homepage Sophistication */
 header {
   background: var(--paper);
   border-bottom: 1px solid var(--rule);
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
 }
 
 .wrap {
@@ -36,15 +40,14 @@ header {
   padding: 0 1.25rem;
 }
 
-.logo-text {
-  font-family: var(--sans);
-  font-weight: 800;
-  font-size: 1.4rem;
-  letter-spacing: -0.03em;
+header h1 {
+  margin: 0 0 10px 0 !important;
+  font-family: var(--sans) !important;
+  font-size: 1.35rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.02em !important;
   color: var(--ink);
-  margin-bottom: 0.75rem;
-  display: block;
-  text-decoration: none;
+  text-transform: none;
 }
 
 nav {
@@ -55,36 +58,39 @@ nav {
 
 nav a {
   font-family: var(--sans);
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--accent);
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease;
 }
 
-nav a:hover { opacity: 0.7; }
+nav a:hover {
+  opacity: 0.7;
+}
 
-/* The "Scientific Paper" Container */
+/* The Paper Element - Mobile Friendly Archival Look */
 .paper {
   background: var(--paper);
   border: 1px solid var(--rule);
   box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-  margin: 2rem auto;
-  padding: 2rem 1.5rem; /* Mobile padding */
+  margin: 1.5rem auto;
+  padding: 2rem 1.25rem; /* Mobile padding */
 }
 
+/* Sophisticated desktop spacing */
 @media (min-width: 768px) {
   .paper {
-    padding: 5rem 6rem; /* Desktop sophistication */
-    margin: 4rem auto;
+    padding: 5rem 6rem;
+    margin: 3.5rem auto;
   }
 }
 
 /* Typography Hierarchy */
 h1 {
-  font-size: 2rem;
+  font-size: 1.85rem;
   line-height: 1.2;
   color: var(--ink);
   margin-bottom: 1.5rem;
@@ -96,7 +102,7 @@ h1 {
 
 h2 {
   font-family: var(--sans);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-top: 3rem;
@@ -107,29 +113,40 @@ h2 {
 
 .kicker {
   font-family: var(--sans);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
+.meta {
+  font-family: var(--sans);
+  color: var(--muted);
+  font-size: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+/* Abstract & Technical Callouts */
 .abstract {
-  background: #f9f9f7;
+  background: #fdfdfb;
   border: 1px solid var(--rule);
   padding: 1.5rem;
   font-style: italic;
-  margin: 2rem 0;
-  position: relative;
+  margin: 2.5rem 0;
+  border-radius: 2px;
 }
 
 .tech-box {
-  background: #f1f4f7;
+  background: #f4f7f9;
   border-left: 3px solid var(--accent);
   padding: 1.5rem;
   font-family: var(--sans);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin: 2rem 0;
 }
 
@@ -138,8 +155,15 @@ footer {
   text-align: center;
   padding: 4rem 0;
   font-family: var(--sans);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
   color: var(--muted);
   border-top: 1px solid var(--rule);
   background: var(--paper);
+}
+
+/* Image & Table Responsiveness */
+img, table {
+  max-width: 100%;
+  height: auto;
 }
