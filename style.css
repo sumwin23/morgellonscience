@@ -1,173 +1,145 @@
-/* style.css - MorgellonScience Archive Theme */
+/* style.css - MorgellonScience Professional Forensic Theme */
 
 :root {
-  --bg: #fbfbf8;
+  --bg: #fdfcf8;      /* The sophisticated cream background */
   --paper: #ffffff;
-  --ink: #141414;
-  --muted: #666;
-  --rule: #dddddd;
-  --accent: #1b3a57; /* The Deep Navy from your homepage */
-  --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
-  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --ink: #181818;
+  --muted: #6b6b6b;
+  --rule: #e0ddd5;    /* Subtle cream-toned border */
+  --accent: #1b3a57;  /* Deep Navy */
+  --serif: "Georgia", "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Global Reset */
 * { box-sizing: border-box; }
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--serif);
-    background: var(--bg);
-    color: var(--ink);
-    line-height: 1.65;
-    -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Header & Nav - Matches Homepage */
+/* Header & Navigation */
 header {
-    background: #fff;
-    border-bottom: 1px solid var(--rule);
-    padding: 10px 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  padding: 1.5rem 0;
 }
 
 .wrap {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
-header h1 {
-    margin: 0 0 10px 0 !important;
-    font-size: 1.4rem !important;
-    font-family: var(--sans);
-    letter-spacing: -0.02em;
+.logo-text {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+  display: block;
+  text-decoration: none;
 }
 
 nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 nav a {
-    font-family: var(--sans);
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--accent);
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
-nav a:hover { text-decoration: underline; }
+nav a:hover { opacity: 0.7; }
 
-/* Main Content Area */
-main.wrap {
-    padding: 20px 10px; /* Tighter for mobile */
-}
-
-/* THE PAPER - The core visual element */
+/* The "Scientific Paper" Container */
 .paper {
-    background: var(--paper);
-    border: 1px solid var(--rule);
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    margin: 10px auto;
-    padding: 25px; /* Mobile Padding */
-    max-width: 100%;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  margin: 2rem auto;
+  padding: 2rem 1.5rem; /* Mobile padding */
 }
 
-/* Desktop sizing for the paper to match site look */
 @media (min-width: 768px) {
-    main.wrap { padding: 40px 20px; }
-    .paper { padding: 60px; margin: 20px auto; }
+  .paper {
+    padding: 5rem 6rem; /* Desktop sophistication */
+    margin: 4rem auto;
+  }
 }
 
 /* Typography Hierarchy */
-.kicker {
-    font-family: var(--sans);
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: .15em;
-    font-size: .7rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-h1 { 
-    font-size: 1.9rem; 
-    line-height: 1.2; 
-    margin: 10px 0 20px 0; 
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
-    h1 { font-size: 2.6rem; }
+  h1 { font-size: 2.8rem; }
 }
 
 h2 {
-    margin-top: 40px;
-    font-size: 1.5rem;
-    border-bottom: 2px solid var(--rule);
-    padding-bottom: 8px;
-    font-family: var(--serif);
+  font-family: var(--sans);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 3rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.5rem;
+  color: var(--accent);
 }
 
-h3 {
-    margin-top: 25px;
-    font-family: var(--sans);
-    color: var(--accent);
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+.kicker {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
 }
 
-.meta {
-    font-family: var(--sans);
-    color: var(--muted);
-    font-size: 0.8rem;
-    display: flex;
-    gap: 15px;
-    margin-bottom: 30px;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-}
-
-/* Callout Boxes */
 .abstract {
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    background: #fcfcfc;
-    padding: 20px;
-    margin: 25px 0;
-    font-style: italic;
+  background: #f9f9f7;
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  font-style: italic;
+  margin: 2rem 0;
+  position: relative;
 }
 
 .tech-box {
-    background: #f0f4f8;
-    border-left: 4px solid var(--accent);
-    padding: 20px;
-    margin: 25px 0;
-    font-family: var(--sans);
-    font-size: 0.9rem;
+  background: #f1f4f7;
+  border-left: 3px solid var(--accent);
+  padding: 1.5rem;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  margin: 2rem 0;
 }
-
-/* Scientific Bibliography */
-.refs {
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    line-height: 1.5;
-    padding-left: 1.2rem;
-}
-
-.rule { border: 0; border-top: 1px solid var(--rule); margin: 40px 0; }
 
 /* Footer */
 footer {
-    background: #fff;
-    border-top: 1px solid var(--rule);
-    padding: 30px 0;
-    margin-top: 40px;
-    color: var(--muted);
-    font-family: var(--sans);
-    font-size: 0.85rem;
-    text-align: center;
+  text-align: center;
+  padding: 4rem 0;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  background: var(--paper);
 }
